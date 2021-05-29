@@ -15,22 +15,22 @@
 
     <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
         <div>
-            <img src="{{ asset('images/'. $latestPost->image_path) }}" width="700" alt="Image" />
+            <img src="{{ asset('images/'. $data->image_path) }}" width="700" alt="Image" />
         </div>
         <div class="m-auto sm:m-auto text-left w-4/5 block">
             <h2 class="text-4xl font-extrabold text-gray-600">
-                {{ $latestPost->title }}
+                {{ $data->title }}
             </h2>
             <p class="py-8 text-gray-500 text-l">
-                {{ $latestPost->description }}
+                {{ $data->description }}
             </p>
             <a href="/blog" class="uppercase bg-blue-500 text-gray-100 text-l font-extrabold py-3 px-8 rounded-3xl"></a>
         </div>
     </div>
-
+    
     <div class="text-center py-15">
         <span class="uppercase text-s text-gray-400">
-            Blog
+            $data->title
         </span>
         <h2 class="text-4xl font-bold py-10">
             Recent Posts
@@ -43,6 +43,32 @@
         </p>
     </div>
 
+
+
+    <div class="sm:grid grid-cols-4 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
+        
+        @foreach($data2 as $data2)
+            <div>
+                <img src="{{ asset('images/'. $data2->image_path) }}" width="700" alt="Image" />
+            
+                <div class="py-4 m-auto sm:m-auto text-left w-4/5 block">
+                    <h2 class="text-2xl font-bold text-gray-600">
+                    {{ $data2->title }}
+                    </h2>
+                    <p class="py-4 text-gray-500 text-s">
+                    {{ $data2->description }}
+                    </p>
+                    <a href="/blog">
+                    <button
+                       class="uppercase bg-blue-500 text-gray-100 text-s
+                       font-bold py-2 px-4 rounded-3xl"> Keep reading
+                    </button>
+                    </a>
+              </div>
+            </div>
+            @endforeach
+    </div>
+    
     <div class="sm:grid grid-cols-2 w-4/5 m-auto">
         <div class="flex bg-yellow-700 text-gray-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">

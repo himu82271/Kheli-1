@@ -12,18 +12,17 @@
             </div>
         </div>
     </div>
+
     <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
         <div>
-            <img src="{{ url('/images/Post1.png') }}" width="700" alt="Image" />
+            <img src="{{ asset('images/'. $latestPost->image_path) }}" width="700" alt="Image" />
         </div>
         <div class="m-auto sm:m-auto text-left w-4/5 block">
             <h2 class="text-4xl font-extrabold text-gray-600">
-                Spider-Man Miles Morales will be getting an PC version
+                {{ $latestPost->title }}
             </h2>
             <p class="py-8 text-gray-500 text-l">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, rem minima fugiat,
-                neque exercitationem esse at architecto accusantium, praesentium animi excepturi nobis
-                quae nihil itaque! Possimus fugit dolorum voluptas fuga!
+                {{ $latestPost->description }}
             </p>
             <a href="/blog" class="uppercase bg-blue-500 text-gray-100 text-l font-extrabold py-3 px-8 rounded-3xl"></a>
         </div>

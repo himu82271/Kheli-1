@@ -13,7 +13,7 @@ class PagesController extends Controller
      
         
         $data=Post::orderBy('created_at', 'desc')->first();
-        $data2=Post::orderBy('created_at', 'desc')->take(2)->get();
+        $data2=Post::orderBy('created_at', 'desc')->take(4)->get();
         return view('index',compact('data','data2'));
     // return Post::orderBy('created_at', 'desc')->first();
       //$data= Post::all();

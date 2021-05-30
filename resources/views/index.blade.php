@@ -29,18 +29,12 @@
     </div>
     
     <div class="text-center py-15">
-        <span class="uppercase text-s text-gray-400">
-            $data->title
-        </span>
+        
         <h2 class="text-4xl font-bold py-10">
             Recent Posts
         </h2>
 
-        <p class="m-auto w-4/5 text-gray-500">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius similique,
-            facere perferendis quam earum recusandae quas unde ratione, aliquid voluptates
-            impedit natus nam ipsam praesentium? Possimus voluptas nostrum qui nemo.
-        </p>
+        
     </div>
 
 
@@ -58,7 +52,7 @@
                     <p class="py-4 text-gray-500 text-s">
                     {{ $data2->description }}
                     </p>
-                    <a href="/blog">
+                    <a href="/blog/{{$data2->slug}}">
                     <button
                        class="uppercase bg-blue-500 text-gray-100 text-s
                        font-bold py-2 px-4 rounded-3xl"> Keep reading
@@ -69,27 +63,6 @@
             @endforeach
     </div>
     
-    <div class="sm:grid grid-cols-2 w-4/5 m-auto">
-        <div class="flex bg-yellow-700 text-gray-100 pt-10">
-            <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
-                <span class="uppercase text-xs">
-                    PHP
-                </span>
-                <h3 class=" text-xl font-bold py-10">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam odio dolores
-                    distinctio ducimus soluta at minima? Voluptate veniam, porro voluptatum perspiciatis,
-                    eveniet earum aspernatur aliquam fuga aut magnam id dolor.
-                </h3>
-                <a href="" class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold
-                        py-3 px-5 rounded-3xl">
-                    Find Out More
-                </a>
-            </div>
-        </div>
-        <div>
-            <img src="{{ url('/images/Post1.png') }}" width="700" alt="Image" />
-        </div>
-    </div>
 
 
 @endsection

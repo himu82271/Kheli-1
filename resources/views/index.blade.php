@@ -24,7 +24,7 @@
             <p class="py-8 text-gray-500 text-l">
                 {{ $data->description }}
             </p>
-            <a href="/blog" class="uppercase bg-blue-500 text-gray-100 text-l font-extrabold py-3 px-8 rounded-3xl"></a>
+            <a href="/blog/{{$data->slug}}" class="uppercase bg-blue-500 text-gray-100 text-l font-extrabold py-3 px-8 rounded-3xl"></a>
         </div>
     </div>
     
